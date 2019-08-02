@@ -1,0 +1,59 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "."
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "prettier"
+  ],
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "prettier",
+    "prettier/react",
+    "prettier/@typescript-eslint"
+  ],
+  "rules": {
+    "semi": ["warn", "never"],
+    "no-console": ["warn"],
+    "react/jsx-filename-extension": ["error",
+      { "extensions": [".tsx"] }
+    ],
+    "comma-dangle": ["error", {"imports": "never"}],
+    "no-use-before-define": ["error",
+      { "variables": false }
+    ],
+    "react/require-default-props": ["off"],
+    "react/default-props-match-prop-types": ["off"],
+    "react/sort-comp": ["off"],
+    "prettier/prettier": ["error",
+      {
+        "singleQuote": true,
+        "semi": false 
+      }
+    ],
+    "import/prefer-default-export": ["off"],
+    "no-nested-ternary": ["off"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "import/named": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-use-before-define": [ "error",
+      { "variables": false }
+    ],
+    "@typescript-eslint/explicit-member-accessibility": ["error", {
+      "accessibility": "no-public"
+    }],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "class-methods-use-this": "off",
+    "@typescript-eslint/no-unused-vars": "error"
+  }
+}
